@@ -15,7 +15,7 @@
         };
 
         if ( $menu.length ) {
-            $listItem = $menu.find('li:has(ul)');
+            var $listItem = $menu.find('li:has(ul)');
 
             $listItem.on('mouseenter', showMenu);
 
