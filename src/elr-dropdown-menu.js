@@ -1,33 +1,32 @@
-(function($) {
-    window.elrDropdownMenu = function(params) {
-        var self = {};
-        var spec = params || {};
-        var menuClass = spec.menuClass || 'elr-dropdown-nav';
-        var speed = spec.speed || 500;
-        var $menu = $('.' + menuClass);
+const $ = require('jquery');
 
-        var showMenu = function() {
-            $(this).children('ul').stop().fadeIn(300);
-        };
+const elrDropdownMenu = function({
+    menuClass = 'elr-dropdown-nav',
+    speed = 500
+} = {}) {
+    const $menu = $(`.${menuClass}`);
 
-        var hideMenu = function(speed) {
-            $(this).children('ul').stop().fadeOut(speed);
-        };
-
-        if ( $menu.length ) {
-            var $listItem = $menu.find('li:has(ul)');
-
-            $listItem.on('mouseenter', showMenu);
-
-            $listItem.on('mouseleave', function() {
-                hideMenu.call(this, speed);
-            });
-
-            $listItem.children('a').on('click', function(e) {
-                e.preventDefault();
-            });
-        }
-
-        return self;
+    const showMenu = function() {
+        $(this).children('ul').stop().fadeIn(300);
     };
-})(jQuery);
+
+    const hideMenu = function(speed) {
+        $(this).children('ul').stop().fadeOut(speed);
+    };
+
+    if ( $menu.length ) {
+        const $listItem = $menu.find('li:has(ul)');
+
+        $listItem.on('mouseenter', showMenu);
+
+        $listItem.on('mouseleave', function() {
+            hideMenu.call(this, speed);
+        });
+
+        $listItem.children('a').on('click', function(e) {
+            e.preventDefault();
+        });
+    }
+};
+
+export default elrDropdownMenu;
