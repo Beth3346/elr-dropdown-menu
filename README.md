@@ -1,6 +1,6 @@
 # elr-dropdown-menu
 
-[![Build Status](https://travis-ci.org/Beth3346/elr-dropdown-menu.svg?branch=master)](https://travis-ci.org/Beth3346/elr-dropdown-menu)
+[![Build Status](https://travis-ci.org/Beth3346/elr-dropdown-menu.svg?branch=master)](https://travis-ci.org/Beth3346/elr-dropdown-menu) [![Greenkeeper badge](https://badges.greenkeeper.io/Beth3346/elr-dropdown-menu.svg)](https://greenkeeper.io/)
 
 a basic content dropdown-menu
 
